@@ -1,5 +1,7 @@
 'use strict'
 
+const { application_name } = require("pg/lib/defaults")
+
 /*
 |--------------------------------------------------------------------------
 | Providers
@@ -56,3 +58,6 @@ const aliases = {}
 const commands = []
 
 module.exports = { providers, aceProviders, aliases, commands }
+
+const PORT = process.env.PORT
+app.listen(PORT)
