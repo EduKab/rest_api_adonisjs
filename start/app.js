@@ -58,9 +58,3 @@ const aliases = {}
 const commands = []
 
 module.exports = { providers, aceProviders, aliases, commands }
-
-const PORT = process.env.PORT || 3333
-
-app.listen(PORT, function(){
-  console.log("Servidor escuchando en el puerto", PORT)
-})
