@@ -51,11 +51,11 @@ module.exports = {
   mysql: {
     client: 'mysql',
     connection: {
-      host: 'ec2-34-201-95-176.compute-1.amazonaws.com',
-      port: '5432',
-      user: 'ovyfpmoupykeyu',
-      password: 'e5f8c4df2d2593668420dcbbe363ef08cd5ee67e038301ca64b135ce31a53b5f',
-      database: 'da63gm11avt5u1'
+      host: Env.get('DB_HOST', 'localhost'),
+      port: Env.get('DB_PORT', ''),
+      user: Env.get('DB_USER', 'root'),
+      password: Env.get('DB_PASSWORD', ''),
+      database: Env.get('DB_DATABASE', 'adonis')
     },
     debug: Env.get('DB_DEBUG', false)
   },
@@ -73,11 +73,11 @@ module.exports = {
   pg: {
     client: 'pg',
     connection: {
-      host: Env.get('DB_HOST', 'ec2-34-201-95-176.compute-1.amazonaws.com'),
+      host: Env.get('DB_HOST', 'localhost'),
       port: Env.get('DB_PORT', '5432'),
-      user: Env.get('DB_USER', 'ovyfpmoupykeyu'),
-      password: Env.get('DB_PASSWORD', 'e5f8c4df2d2593668420dcbbe363ef08cd5ee67e038301ca64b135ce31a53b5f'),
-      database: Env.get('DB_DATABASE', 'da63gm11avt5u1')
+      user: Env.get('DB_USER', 'postgres'),
+      password: Env.get('DB_PASSWORD', '1234'),
+      database: Env.get('DB_DATABASE', 'restapi')
     },
     debug: Env.get('DB_DEBUG', false)
   }
