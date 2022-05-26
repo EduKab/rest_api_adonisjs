@@ -21,6 +21,10 @@ Route.get('/', () => {
 })
 
 Route.group (()=> {
+  Route.get('hola', () => {
+    return { greeting: 'Hola prueba 1' }
+  })
+  
   Route.post('usuarios/registro', 'UserController.store')
   Route.post('usuarios/login', 'UserController.login')
   //Proyectos
