@@ -22,7 +22,7 @@ Route.get('/', () => {
 
 Route.group (()=> {
   Route.get('hola', () => {
-    return { greeting: 'Hola prueba 1' }
+    return { greeting: 'Hola prueba' }
   })
   
   Route.post('usuarios/registro', 'UserController.store')
